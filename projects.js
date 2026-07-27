@@ -2,7 +2,9 @@ window.PROJECTS = [
   {
     id: "iris-flower-classification",
     title: "Iris Flower Classification",
-    description: "A machine learning classification project using the Iris dataset to predict flower species from sepal and petal measurements, with model evaluation and exploratory visualizations.",
+    question: "Can flower species be predicted from a few physical measurements?",
+    description: "I used the Iris dataset to build and evaluate classification models from sepal and petal measurements, while exploring which features best separate the three species.",
+    finding: "The project helped me connect exploratory visualization with the classification decisions a model eventually makes.",
     category: "Machine Learning",
     tags: ["Python", "Pandas", "scikit-learn", "Classification", "Matplotlib"],
     status: "Completed",
@@ -15,7 +17,9 @@ window.PROJECTS = [
   {
     id: "penguin-data-analysis",
     title: "Penguin Data Analysis",
-    description: "Exploratory analysis of the Palmer Penguins dataset focused on species differences, body measurements, relationships between features, and clear statistical visualizations.",
+    question: "What separates penguin species when you look beyond a single measurement?",
+    description: "I’m exploring the Palmer Penguins dataset through statistical summaries and visualizations, comparing species across body mass, flipper length, bill dimensions, and relationships between features.",
+    finding: "The goal is not just to make plots, but to explain which measurements actually reveal meaningful species differences.",
     category: "Data Analysis",
     tags: ["Python", "Pandas", "EDA", "Statistics", "Matplotlib"],
     status: "In Progress",
@@ -28,7 +32,9 @@ window.PROJECTS = [
   {
     id: "customer-behavior-analysis",
     title: "Customer Behavior Analysis",
-    description: "Cleaned and analyzed online retail transactions to study repeat customers, purchase frequency, order behavior, popular products, and customer spending patterns.",
+    question: "How often do customers actually come back, and what does repeat purchasing look like?",
+    description: "I cleaned a large online retail transaction dataset and am analyzing returning customers, purchase frequency, order behavior, popular products, and spending patterns.",
+    finding: "One question I’m digging into is whether the biggest buyers are one-time bulk purchasers or customers who return across multiple dates and orders.",
     category: "Data Analysis",
     tags: ["Python", "Pandas", "Data Cleaning", "Customer Analytics", "Statistics"],
     status: "In Progress",

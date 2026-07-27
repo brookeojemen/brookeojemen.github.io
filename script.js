@@ -50,7 +50,7 @@
       const order = sort?.value || "newest";
 
       let filtered = projects.filter(project => {
-        const haystack = [project.title, project.description, project.category, ...(project.tags || []), ...(project.metrics || [])].join(" ").toLowerCase();
+        const haystack = [project.title, project.question, project.description, project.finding, project.category, ...(project.tags || []), ...(project.metrics || [])].join(" ").toLowerCase();
         return (!q || haystack.includes(q)) &&
           (cat === "all" || project.category === cat) &&
           (stat === "all" || project.status === stat);
@@ -78,7 +78,9 @@
             </div>
             <span class="status ${project.status === "Completed" ? "status--done" : "status--wip"}">${escapeHTML(project.status)}</span>
           </div>
+          ${project.question ? `<div class="project-question"><span>Question</span><strong>${escapeHTML(project.question)}</strong></div>` : ""}
           <p class="project-description">${escapeHTML(project.description)}</p>
+          ${project.finding ? `<div class="project-finding"><span>What I’m looking at</span><p>${escapeHTML(project.finding)}</p></div>` : ""}
           <div class="metric-row">${metrics}</div>
           <div class="tag-row">${tags}</div>
           <div class="project-card__foot">
@@ -104,6 +106,7 @@
       <article class="mini-project">
         <p class="project-meta">${escapeHTML(project.category)} · ${escapeHTML(project.status)}</p>
         <h3>${escapeHTML(project.title)}</h3>
+        ${project.question ? `<p class="mini-question">${escapeHTML(project.question)}</p>` : ""}
         <p>${escapeHTML(project.description)}</p>
         <div class="tag-row">${(project.tags || []).slice(0, 4).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}</div>
       </article>`).join("");

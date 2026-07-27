@@ -33,3 +33,28 @@ The Iris project already points to your current repository. Add GitHub links for
 ## GitHub Pages
 
 Upload all six website files to the same repository directory. GitHub Pages will serve `index.html` automatically.
+
+
+## Personality update
+This version uses an aquamarine/teal primary accent with a restrained blush-pink secondary accent.
+The homepage now includes:
+- a small `whoami` detail
+- a dataframe-style current-focus card
+- a "Currently" section
+- more personal writing
+- question-driven project storytelling
+
+## Public vs private files
+For your public GitHub Pages repository, upload:
+- index.html
+- projects.html
+- style.css
+- projects.js
+- script.js
+- README.md
+
+Keep these local/private:
+- admin.html
+- admin.js
+
+The editor can export a new `projects.js`, which you then replace in your public repository.

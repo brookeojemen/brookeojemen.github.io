@@ -13,7 +13,7 @@
 <body>
   <nav class="site-nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">Brooke Ojemen</a>
+      <a class="brand" href="index.html"><span class="brand-mark">B.</span> Brooke Ojemen</a>
       <div class="nav-links">
         <a href="index.html" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
@@ -27,8 +27,9 @@
     <section class="hero container">
       <div class="hero-copy">
         <p class="eyebrow">Computer Science B.S. · Mathematics Minor</p>
-        <h1>I turn messy data into clear, useful decisions.</h1>
-        <p class="hero-text">I’m Brooke, a senior Computer Science student at Hobart and William Smith Colleges focused on data science, machine learning, and backend software engineering.</p>
+        <p class="terminal-kicker"><span>&gt;</span> whoami</p>
+        <h1>I like finding the story hiding in messy data.</h1>
+        <p class="hero-text">I’m Brooke, a senior Computer Science student and Mathematics minor who enjoys cleaning real-world datasets, asking useful questions, and turning the answers into models, visualizations, and clear conclusions.</p>
         <div class="hero-actions">
           <a class="button" href="projects.html">View projects</a>
           <a class="button button--ghost" href="mailto:brooke.ojemen@gmail.com">Email me</a>
@@ -38,13 +39,16 @@
           <a href="https://www.linkedin.com/in/brooke-o-9422b2340" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
-      <aside class="profile-card" aria-label="Current focus">
-        <p class="profile-label">Currently focused on</p>
-        <div class="profile-row"><span>01</span><strong>Data analysis</strong></div>
-        <div class="profile-row"><span>02</span><strong>Machine learning</strong></div>
-        <div class="profile-row"><span>03</span><strong>Statistics</strong></div>
-        <div class="profile-row"><span>04</span><strong>Backend engineering</strong></div>
-        <p class="profile-note">Open to internship and new-grad opportunities.</p>
+      <aside class="profile-card profile-card--personality" aria-label="Current focus">
+        <p class="profile-label">brooke.head()</p>
+        <div class="dataframe">
+          <div class="dataframe-row dataframe-head"><span></span><span>focus</span><span>status</span></div>
+          <div class="dataframe-row"><span>0</span><strong>data science</strong><em>building</em></div>
+          <div class="dataframe-row"><span>1</span><strong>statistics</strong><em>learning</em></div>
+          <div class="dataframe-row"><span>2</span><strong>machine learning</strong><em>exploring</em></div>
+          <div class="dataframe-row"><span>3</span><strong>messy datasets</strong><em>cleaning</em></div>
+        </div>
+        <p class="profile-note"><span class="live-dot"></span> Open to internship and new-grad opportunities.</p>
       </aside>
     </section>
 
@@ -52,11 +56,11 @@
       <div class="container two-col">
         <div>
           <p class="eyebrow">About</p>
-          <h2>Computer science, with a data-first mindset.</h2>
+          <h2>Computer science, with a curious data-first mindset.</h2>
         </div>
         <div class="body-copy">
-          <p>I enjoy taking large or messy datasets, cleaning them carefully, finding meaningful patterns, and turning the results into visualizations or models that are easy to understand.</p>
-          <p>My mathematics minor gives me a stronger foundation in probability, linear algebra, optimization, and statistical reasoning, while my computer science background helps me build the software around the analysis.</p>
+          <p>I originally leaned toward software engineering, but the part I kept enjoying most was the investigation: <strong>what does the data actually say?</strong> I like starting with something imperfect, cleaning it carefully, testing an idea, and seeing whether the evidence supports the story I expected.</p>
+          <p>My mathematics minor strengthens that process with probability, linear algebra, optimization, and statistical reasoning, while computer science gives me the tools to build the analysis and software around it.</p>
         </div>
       </div>
     </section>
@@ -70,6 +74,35 @@
         <a class="text-link" href="projects.html">See all projects →</a>
       </div>
       <div class="featured-grid" data-featured-projects></div>
+    </section>
+
+    <section class="section section--accent">
+      <div class="container">
+        <div class="section-heading currently-heading">
+          <div>
+            <p class="eyebrow">Currently</p>
+            <h2>What I’m working on right now.</h2>
+          </div>
+          <span class="currently-badge"><span class="live-dot"></span> July 2026</span>
+        </div>
+        <div class="currently-grid">
+          <article class="currently-card">
+            <span class="currently-label">building</span>
+            <h3>Customer Behavior Analysis</h3>
+            <p>Investigating repeat purchases, returning customers, order frequency, and purchasing patterns in a large online retail dataset.</p>
+          </article>
+          <article class="currently-card">
+            <span class="currently-label">learning</span>
+            <h3>Probability + ML foundations</h3>
+            <p>Strengthening the statistics behind model evaluation, uncertainty, hypothesis testing, and why a model behaves the way it does.</p>
+          </article>
+          <article class="currently-card currently-card--pink">
+            <span class="currently-label">curious about</span>
+            <h3>How data becomes a decision</h3>
+            <p>I’m especially interested in the point where an analysis stops being a chart and starts helping someone decide what to do next.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section section--soft">
@@ -126,7 +159,7 @@
 
     <section class="section container contact-section">
       <p class="eyebrow">Let’s connect</p>
-      <h2>Interested in data science, analytics, or backend engineering opportunities.</h2>
+      <h2>Let’s talk data science, analytics, machine learning, or backend engineering.</h2>
       <p>Reach me at <a class="text-link" href="mailto:brooke.ojemen@gmail.com">brooke.ojemen@gmail.com</a>.</p>
     </section>
   </main>
