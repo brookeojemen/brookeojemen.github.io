@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data science and software projects by Brooke Ojemen.">
+  <title>Projects — Brooke Ojemen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Brooke Ojemen</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="admin.html">Project editor</a>
+        <a href="mailto:brooke.ojemen@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-hero container">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Projects</h1>
+      <p>Data analysis, machine learning, and software projects. Search by topic, tool, or skill.</p>
+    </header>
+
+    <section class="container project-controls" aria-label="Project filters">
+      <label class="search-box">
+        <span>Search</span>
+        <input type="search" data-project-search placeholder="Python, EDA, classification…">
+      </label>
+      <label>
+        <span>Category</span>
+        <select data-project-category>
+          <option value="all">All categories</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Data Analysis">Data Analysis</option>
+          <option value="Software Engineering">Software Engineering</option>
+        </select>
+      </label>
+      <label>
+        <span>Status</span>
+        <select data-project-status>
+          <option value="all">All statuses</option>
+          <option value="Completed">Completed</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+      </label>
+      <label>
+        <span>Sort</span>
+        <select data-project-sort>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="az">A–Z</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="container projects-section">
+      <div class="project-list-head"><span data-project-count>0 projects</span><a class="text-link" href="admin.html">Edit projects →</a></div>
+      <div class="project-grid" data-project-grid></div>
+      <div class="empty-state" data-project-empty hidden>
+        <h2>No matching projects</h2>
+        <p>Try a different search term or filter.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><span>© 2026 Brooke Ojemen</span><a href="index.html">Back home</a></div>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
