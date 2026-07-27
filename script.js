@@ -70,7 +70,13 @@
           project.demo ? `<a class="text-link" href="${escapeHTML(project.demo)}" target="_blank" rel="noopener">Live demo ↗</a>` : ""
         ].filter(Boolean).join("");
 
-        return `<article class="project-card">
+        return `
+      <div class="timeline-project ${project.status === "Completed" ? "timeline-project--done" : "timeline-project--wip"}">
+        <div class="timeline-date-block">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <time datetime="${escapeHTML(project.date || "")}">${formatProjectDate(project.date)}</time>
+        </div>
+        <article class="project-card">
           <div class="project-card__top">
             <div>
               <p class="project-meta">${escapeHTML(formatDate(project.date))} · ${escapeHTML(project.category)}</p>
@@ -87,7 +93,9 @@
             <span class="project-id">${escapeHTML(project.id || projectSlug(project.title))}</span>
             <div class="project-links">${links || '<span class="muted">Link coming soon</span>'}</div>
           </div>
-        </article>`;
+        </article>
+      </div>
+    `;
       }).join("");
 
       if (count) count.textContent = `${filtered.length} project${filtered.length === 1 ? "" : "s"}`;

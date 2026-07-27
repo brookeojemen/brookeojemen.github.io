@@ -58,3 +58,23 @@ Keep these local/private:
 - admin.js
 
 The editor can export a new `projects.js`, which you then replace in your public repository.
+
+
+## Projects timeline
+The projects page uses a teal/aquamarine vertical project journey on desktop, with pink markers for in-progress work. On mobile it simplifies to date-first cards.
+
+
+## Data-science-first positioning
+This version removes backend engineering as a primary career focus. Programming and software-development skills remain visible as supporting strengths, but the portfolio messaging now centers on:
+- Data Science
+- Data Analysis
+- Machine Learning
+- Statistics
+
+## Hobby photo section
+The homepage now includes a "Beyond the data" section with a photo placeholder.
+To use your own photo:
+1. Add the image to the repository, for example `assets/hobby.jpg`
+2. Replace the placeholder `<div class="hobby-image-placeholder">...</div>` with:
+   `<img class="hobby-photo" src="assets/hobby.jpg" alt="Describe the hobby photo">`
+3. Update the hobby title and caption text.
