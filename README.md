@@ -78,3 +78,7 @@ To use your own photo:
 2. Replace the placeholder `<div class="hobby-image-placeholder">...</div>` with:
    `<img class="hobby-photo" src="assets/hobby.jpg" alt="Describe the hobby photo">`
 3. Update the hobby title and caption text.
+
+
+## Optional live demos
+Every project already has a `demo` field. Leave it as `demo: ""` when a live demo is unnecessary. If you later deploy an interactive dashboard, web app, or model demo, paste its URL into that field and the Projects page will automatically show a **Live demo ↗** link.

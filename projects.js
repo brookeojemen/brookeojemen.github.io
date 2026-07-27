@@ -24,7 +24,7 @@ window.PROJECTS = [
     tags: ["Python", "Pandas", "EDA", "Statistics", "Matplotlib"],
     status: "In Progress",
     date: "2026-07",
-    github: "",
+    github: "https://github.com/brookeojemen/Penguin-Data-Analysis.git",
     demo: "",
     featured: true,
     metrics: ["EDA", "Visualization", "Feature relationships"]
@@ -39,7 +39,7 @@ window.PROJECTS = [
     tags: ["Python", "Pandas", "Data Cleaning", "Customer Analytics", "Statistics"],
     status: "In Progress",
     date: "2026-07",
-    github: "",
+    github: "https://github.com/brookeojemen/customer-behavior-analysis.git",
     demo: "",
     featured: true,
     metrics: ["Customer retention", "Repeat purchases", "Retail data"]
