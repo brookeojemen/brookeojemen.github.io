@@ -18,16 +18,16 @@ window.PROJECTS = [
     id: "penguin-data-analysis",
     title: "Penguin Data Analysis",
     question: "What separates penguin species when you look beyond a single measurement?",
-    description: "I’m exploring the Palmer Penguins dataset through statistical summaries and visualizations, comparing species across body mass, flipper length, bill dimensions, and relationships between features.",
-    finding: "The goal is not just to make plots, but to explain which measurements actually reveal meaningful species differences.",
+    description: "I analyzed the Palmer Penguins dataset using data cleaning, descriptive statistics, and visualizations to compare species across culmen length, flipper length, body mass, and island distribution.",
+    finding: "Chinstrap penguins showed greater average culmen length than Adelie penguins, while Gentoo penguins showed substantially greater average flipper length and body mass. The analysis also identified and handled an anomalous flipper-length measurement.",
     category: "Data Analysis",
-    tags: ["Python", "Pandas", "EDA", "Statistics", "Matplotlib"],
-    status: "In Progress",
+    tags: ["Python", "Pandas", "EDA", "Data Cleaning", "Descriptive Statistics", "Matplotlib"],
+    status: "Completed",
     date: "2026-07",
     github: "https://github.com/brookeojemen/Penguin-Data-Analysis.git",
     demo: "",
     featured: true,
-    metrics: ["EDA", "Visualization", "Feature relationships"]
+    metrics: ["EDA", "Descriptive statistics", "Outlier investigation"]
   },
   {
     id: "customer-behavior-analysis",
