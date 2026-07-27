@@ -1,3 +1,13 @@
+
+function formatProjectDate(value) {
+  if (!value) return "Undated";
+  const parts = value.split("-");
+  const year = Number(parts[0]);
+  const month = Number(parts[1] || 1);
+  const d = new Date(year, Math.max(0, month - 1), 1);
+  return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+}
+
 (() => {
   const STORAGE_KEY = "brookePortfolioProjects";
 
