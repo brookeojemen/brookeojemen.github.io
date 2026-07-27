@@ -1,0 +1,1 @@
+function render(){const c=document.getElementById('projects');if(!c)return;c.innerHTML='';projects.forEach(p=>{const d=document.createElement('div');d.innerHTML=`<h3>${p.title}</h3><p>${p.description}</p><p>${p.tags.join(', ')}</p><b>${p.status}</b><hr>`;c.appendChild(d);});}document.addEventListener('DOMContentLoaded',render);
