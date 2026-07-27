@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Your Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">root<span class="dim">@</span>portfolio<span class="cursor-blip" aria-hidden="true"></span></a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="projects.html" aria-current="page">projects</a>
+      <a href="mailto:brooke.ojemen@gmail.com">contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <p class="eyebrow">Selected Work</p>
+    <h1>Things I've built</h1>
+    <p style="max-width:56ch; margin-top:12px;">
+      Models, pipelines, and analyses.
+    </p>
+  </div>
+
+  <div class="filter-bar" role="group" aria-label="Filter projects by category">
+    <span class="prompt-label">$ ls projects --filter=</span>
+    <button class="filter-btn" data-filter="all" aria-pressed="true">all</button>
+    <button class="filter-btn" data-filter="ml" aria-pressed="false">ml</button>
+    <button class="filter-btn" data-filter="stats" aria-pressed="false">stats</button>
+    <button class="filter-btn" data-filter="de" aria-pressed="false">data-eng</button>
+    <button class="filter-btn" data-filter="viz" aria-pressed="false">viz</button>
+  </div>
+
+  <div class="proj-timeline" id="project-grid">
+
+    <!-- Items are ordered newest → oldest. To add a new project, drop it in at the right point. -->
+
+    <div class="proj-item de" data-category="de">
+      <div class="proj-rail"><span class="proj-dot"></span></div>
+      <div class="proj-main">
+        <div class="proj-date">Jul 2026</div>
+        <article class="project-card de">
+          <div class="card-bar"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <div class="card-title"><span class="glyph">$ ./</span>feature-pipeline</div>
+              <span class="card-cat">data engineering</span>
+            </div>
+            <p>
+              An orchestrated feature store that computes and versions training features
+              on a schedule, so models are trained and served on consistent data.
+            </p>
+            <div class="card-stack">
+              <span>Python</span><span>Airflow</span><span>Docker</span><span>AWS</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-status wip">in progress</span>
+              <!-- Replace the href below with your GitHub repo URL -->
+              <span class="card-links"><a href="https://github.com/brookeojemen/iris-flower-classifications.git" target="_blank" rel="noopener">GitHub</a></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="proj-item stats" data-category="stats">
+      <div class="proj-rail"><span class="proj-dot"></span></div>
+      <div class="proj-main">
+        <div class="proj-date">Apr 2026</div>
+        <article class="project-card stats">
+          <div class="card-bar"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <div class="card-title"><span class="glyph">$ ./</span>causal-uplift</div>
+              <span class="card-cat">statistics</span>
+            </div>
+            <p>
+              Uplift modeling on A/B test data using causal inference methods, to identify
+              which users were actually moved by a promotion rather than just correlated with it.
+            </p>
+            <div class="card-stack">
+              <span>Python</span><span>causalml</span><span>statsmodels</span><span>Pandas</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-status">shipped</span>
+              <!-- GitHub repo + write-up. Swap "#" for your write-up URL if you have one. -->
+              <span class="card-links">
+                <a href="https://github.com/yourusername/causal-uplift" target="_blank" rel="noopener">GitHub</a>
+                <a href="#">Write-up</a>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="proj-item ml" data-category="ml">
+      <div class="proj-rail"><span class="proj-dot"></span></div>
+      <div class="proj-main">
+        <div class="proj-date">Feb 2026</div>
+        <article class="project-card ml">
+          <div class="card-bar"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <div class="card-title"><span class="glyph">$ ./</span>churn-predictor</div>
+              <span class="card-cat">machine learning</span>
+            </div>
+            <p>
+              A gradient-boosted churn model for a subscription dataset, with SHAP-based
+              explanations so the business team can see exactly what's driving each score.
+            </p>
+            <div class="card-stack">
+              <span>Python</span><span>XGBoost</span><span>SHAP</span><span>PostgreSQL</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-status">shipped</span>
+              <span class="card-links">
+                <a href="https://github.com/yourusername/churn-predictor" target="_blank" rel="noopener">GitHub</a>
+                <a href="#">Write-up</a>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="proj-item viz" data-category="viz">
+      <div class="proj-rail"><span class="proj-dot"></span></div>
+      <div class="proj-main">
+        <div class="proj-date">Jan 2026</div>
+        <article class="project-card viz">
+          <div class="card-bar"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <div class="card-title"><span class="glyph">$ ./</span>sentiment-dash</div>
+              <span class="card-cat">visualization</span>
+            </div>
+            <p>
+              A dashboard that scrapes and scores product reviews for sentiment over time,
+              surfacing trend shifts before they show up in support tickets.
+            </p>
+            <div class="card-stack">
+              <span>Python</span><span>NLTK</span><span>React</span><span>PostgreSQL</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-status wip">in progress</span>
+              <!-- Replace with your GitHub repo and hosted dashboard URL -->
+              <span class="card-links">
+                <a href="https://github.com/yourusername/sentiment-dash" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://your-live-demo-url.com" target="_blank" rel="noopener">Live Demo</a>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="proj-item de" data-category="de">
+      <div class="proj-rail"><span class="proj-dot"></span></div>
+      <div class="proj-main">
+        <div class="proj-date">Nov 2025</div>
+        <article class="project-card de">
+          <div class="card-bar"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <div class="card-title"><span class="glyph">$ ./</span>stream-analytics</div>
+              <span class="card-cat">data engineering</span>
+            </div>
+            <p>
+              A real-time analytics pipeline that ingests clickstream events, aggregates
+              them in sliding windows, and surfaces anomalies on a live dashboard.
+            </p>
+            <div class="card-stack">
+              <span>Python</span><span>Kafka</span><span>Spark</span><span>PostgreSQL</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-status">shipped</span>
+              <span class="card-links">
+                <a href="https://github.com/yourusername/stream-analytics" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://your-live-demo-url.com" target="_blank" rel="noopener">Live Demo</a>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="proj-item ml" data-category="ml">
+      <div class="proj-rail"><span class="proj-dot"></span></div>
+      <div class="proj-main">
+        <div class="proj-date">Sep 2025</div>
+        <article class="project-card ml">
+          <div class="card-bar"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <div class="card-title"><span class="glyph">$ ./</span>reco-engine</div>
+              <span class="card-cat">machine learning</span>
+            </div>
+            <p>
+              A movie recommendation engine comparing collaborative filtering against
+              a content-based model, evaluated on precision@k against a held-out set.
+            </p>
+            <div class="card-stack">
+              <span>Python</span><span>scikit-learn</span><span>Pandas</span><span>Flask</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-status">shipped</span>
+              <span class="card-links">
+                <a href="https://github.com/yourusername/reco-engine" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://your-live-demo-url.com" target="_blank" rel="noopener">Live Demo</a>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>Built by Your Name · updated 2026</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.proj-item');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+
+      const filter = btn.dataset.filter;
+      items.forEach(item => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.hidden = !show;
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
