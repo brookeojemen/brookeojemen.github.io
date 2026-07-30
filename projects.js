@@ -31,17 +31,17 @@ window.PROJECTS = [
   },
   {
     id: "customer-behavior-analysis",
-    title: "Customer Behavior Analysis",
-    question: "How often do customers actually come back, and what does repeat purchasing look like?",
-    description: "I cleaned a large online retail transaction dataset and am analyzing returning customers, purchase frequency, order behavior, popular products, and spending patterns.",
-    finding: "One question I’m digging into is whether the biggest buyers are one-time bulk purchasers or customers who return across multiple dates and orders.",
-    category: "Data Analysis",
-    tags: ["Python", "Pandas", "Data Cleaning", "Customer Analytics", "Statistics"],
+    title: "Customer Behavior Analysis & RFM Customer Segmentation",
+    question: "Can customer purchasing behavior be used to identify meaningful customer segments?",
+    description: "I analyzed nearly 400,000 online retail transactions, engineered Recency, Frequency, and Monetary (RFM) customer features, and applied K-Means clustering to identify distinct customer purchasing behaviors.",
+    finding: "RFM feature engineering and clustering revealed four interpretable customer segments ranging from inactive customers to high-value loyal customers, demonstrating how unsupervised machine learning can support customer analytics.",
+    category: "Machine Learning",
+    tags: ["Python","Pandas","EDA","Data Cleaning","RFM Analysis","K-Means","scikit-learn","Machine Learning"],
     status: "Completed",
-    date: "2026-08",
+    date: "2026-07",
     github: "https://github.com/brookeojemen/customer-behavior-analysis.git",
     demo: "",
     featured: true,
-    metrics: ["Customer retention", "Repeat purchases", "Retail data"]
+    metrics: ["396,769 transactions","RFM Feature Engineering","K-Means Clustering"]
   }
 ];
