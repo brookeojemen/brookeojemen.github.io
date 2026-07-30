@@ -1,7 +1,0 @@
-PUBLIC GITHUB PAGES FILES
-
-Upload the contents of this folder to the ROOT of your GitHub Pages repository.
-
-Do not upload the private editor folder.
-
-index.html should remain at the repository root.
