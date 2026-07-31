@@ -1,84 +1,134 @@
-# Brooke Ojemen Portfolio
+<!DOCTYPE html>
 
-A clean, white, professional portfolio designed for data science, analytics, machine learning, and backend software engineering applications.
-
-## Files
-
-- `index.html` — home page
-- `projects.html` — searchable/filterable project portfolio
-- `admin.html` — no-code project editor
-- `style.css` — complete responsive design
-- `projects.js` — default project data
-- `script.js` — project rendering, search, filters, sorting
-- `admin.js` — add/edit/delete/export project workflow
-
-## Editing projects without touching code
-
-1. Open `admin.html` in your browser.
-2. Fill in the project form and click **Save project**.
-3. Your changes are saved in that browser using `localStorage` and immediately appear on `projects.html` and the featured projects section on `index.html`.
-4. When ready to publish, click **Export projects.js**.
-5. Replace the `projects.js` file in your GitHub Pages repository with the downloaded file and commit/push it.
-
-GitHub Pages is a static host, so a browser cannot permanently rewrite files in your repository on its own. The export workflow gives you a form-based editor without requiring you to manually edit project HTML or JavaScript objects.
-
-## Included projects
-
-- Iris Flower Classification
-- Penguin Data Analysis
-- Customer Behavior Analysis
-
-The Iris project already points to your current repository. Add GitHub links for the other projects when those repositories are ready.
-
-## GitHub Pages
-
-Upload all six website files to the same repository directory. GitHub Pages will serve `index.html` automatically.
-
-
-## Personality update
-This version uses an aquamarine/teal primary accent with a restrained blush-pink secondary accent.
-The homepage now includes:
-- a small `whoami` detail
-- a dataframe-style current-focus card
-- a "Currently" section
-- more personal writing
-- question-driven project storytelling
-
-## Public vs private files
-For your public GitHub Pages repository, upload:
-- index.html
-- projects.html
-- style.css
-- projects.js
-- script.js
-- README.md
-
-Keep these local/private:
-- admin.html
-- admin.js
-
-The editor can export a new `projects.js`, which you then replace in your public repository.
-
-
-## Projects timeline
-The projects page uses a teal/aquamarine vertical project journey on desktop, with pink markers for in-progress work. On mobile it simplifies to date-first cards.
-
-
-## Data-science-first positioning
-This version removes backend engineering as a primary career focus. Programming and software-development skills remain visible as supporting strengths, but the portfolio messaging now centers on:
-- Data Science
-- Data Analysis
-- Machine Learning
-- Statistics
-
-## Hobby photo section
-The homepage now includes a "Beyond the data" section with a photo placeholder.
-To use your own photo:
-1. Add the image to the repository, for example `assets/hobby.jpg`
-2. Replace the placeholder `<div class="hobby-image-placeholder">...</div>` with:
-   `<img class="hobby-photo" src="assets/hobby.jpg" alt="Describe the hobby photo">`
-3. Update the hobby title and caption text.
-
-
-## Optional live demos
-Every project already has a `demo` field. Leave it as `demo: ""` when a live demo is unnecessary. If you later deploy an interactive dashboard, web app, or model demo, paste its URL into that field and the Projects page will automatically show a **Live demo ↗** link.
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Brooke Ojemen — Senior Computer Science student with a Mathematics minor, focused on data science, machine learning, and backend software engineering." name="description"/>
+<title>Brooke Ojemen — Data Science &amp; Software</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<nav class="site-nav">
+<div class="container nav-inner">
+<a class="brand" href="index.html"><span class="brand-mark">B.</span> Brooke Ojemen</a>
+<div class="nav-links">
+<a aria-current="page" href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="resume.pdf" rel="noopener" target="_blank">Resume</a>
+<a href="mailto:brooke.ojemen@gmail.com">Email</a>
+<button aria-label="Hide cat" aria-pressed="true" class="cat-toggle" data-cat-toggle="" title="Hide cat" type="button"><span aria-hidden="true">🐾</span></button>
+</div>
+</div>
+</nav>
+<main>
+<section class="hero hero--formal container">
+<div class="hero-copy">
+<p class="eyebrow">Computer Science · Data Science · Software</p>
+<h1>Brooke Ojemen</h1>
+<p class="hero-title">Senior Computer Science student · Mathematics minor</p>
+<p class="hero-text">Focused on data science, machine learning, and backend software engineering.</p>
+<div class="hero-actions"><a class="button" href="projects.html">Projects</a><a class="button button--ghost" href="resume.pdf" rel="noopener" target="_blank">Resume</a><span class="hero-secondary-links"><a href="https://github.com/brookeojemen" rel="noopener" target="_blank">GitHub ↗</a><a href="mailto:brooke.ojemen@gmail.com">Email</a></span></div>
+</div>
+<aside aria-label="Professional focus" class="hero-summary">
+<div class="summary-line"><span>Primary focus</span><strong>Data Science</strong></div>
+<div class="summary-line"><span>Additional interest</span><strong>Backend SWE</strong></div>
+<div class="summary-line"><span>Core tools</span><strong>Python · Java · SQL</strong></div>
+<a class="linkedin-link" href="https://www.linkedin.com/in/brooke-o-9422b2340" rel="noopener" target="_blank">LinkedIn ↗</a>
+</aside>
+</section>
+<section class="section section--soft">
+<div class="container two-col about-formal">
+<div>
+<p class="eyebrow">About</p>
+<h2>Computer science supported by mathematical reasoning.</h2>
+</div>
+<div class="body-copy">
+<p>I take projects from data cleaning and exploratory analysis through modeling, evaluation, and clear written interpretation.</p>
+</div>
+</div>
+</section>
+<section class="section container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Technical Skills</p>
+<h2>Tools and areas of experience.</h2>
+</div>
+</div>
+<div class="skills-grid skills-grid--resume">
+<article class="skill-card">
+<h3>Primary Languages</h3>
+<p>Python · Java</p>
+</article>
+<article class="skill-card">
+<h3>Data &amp; Web</h3>
+<p>SQL · HTML · CSS · C++</p>
+</article>
+<article class="skill-card">
+<h3>Data Science</h3>
+<p>pandas · NumPy · scikit-learn · Matplotlib · Data Cleaning · EDA</p>
+</article>
+<article class="skill-card">
+<h3>Tools</h3>
+<p>GitHub · VS Code</p>
+</article>
+</div>
+</section>
+<section class="section section--soft" id="experience">
+<div class="container">
+<p class="eyebrow">Experience</p>
+<div class="experience-card">
+<div class="experience-main">
+<p class="experience-type">Professional Experience</p>
+<h2>Information Technology Intern</h2>
+<p class="experience-company">Stone Point Capital</p>
+<p class="experience-location">New York, NY</p>
+</div>
+<div class="experience-date">June 2026 – August 2026</div>
+</div>
+</div>
+</section>
+<section class="section container">
+<p class="eyebrow">Education</p>
+<div class="education-card education-card--resume">
+<div>
+<h3>Hobart and William Smith Colleges</h3>
+<p>Bachelor of Science in Computer Science</p>
+<p>Minor in Mathematics</p>
+</div>
+<p class="education-date">Expected May 2027</p>
+</div>
+<p class="coursework"><strong>Relevant coursework:</strong> Foundations of Computation, Intermediate C++, Intermediate Java, Intermediate Python, Discrete Mathematics, Probability, and Database Theory &amp; Practice.</p>
+</section>
+<section class="section hobby-section section--soft">
+<div class="container hobby-grid">
+<div class="hobby-copy">
+<p class="eyebrow">Beyond academics</p>
+<h2>Outside of school and projects.</h2>
+<p class="hobby-location"><span aria-hidden="true">⌖</span> Taiwan</p>
+<p>A small look at life outside of coursework, programming, and data projects.</p>
+</div>
+<div class="hobby-gallery">
+<figure class="hobby-card"><img alt="Photo from Taiwan" class="hobby-photo" loading="lazy" src="Image(1).webp"/></figure>
+<figure class="hobby-card"><img alt="Photo from Taiwan" class="hobby-photo" loading="lazy" src="Image.webp"/></figure>
+</div>
+</div>
+</section>
+<section class="section container contact-section">
+<p class="eyebrow">Contact</p>
+<h2>Connect with me.</h2>
+<div class="hero-actions contact-actions">
+<a class="button" href="mailto:brooke.ojemen@gmail.com">Email</a>
+<a class="button button--ghost" href="https://www.linkedin.com/in/brooke-o-9422b2340" rel="noopener" target="_blank">LinkedIn ↗</a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner"><span>© 2026 Brooke Ojemen</span><span>Built with HTML, CSS &amp; JavaScript</span></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
