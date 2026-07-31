@@ -922,3 +922,68 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   image-rendering: crisp-edges;
 }
 .portfolio-cat[data-direction="left"] .portfolio-cat__sprite.pixel { transform: scaleX(-1); }
+
+/* Permanent night-mode theme */
+:root {
+  color-scheme: dark;
+  --bg: #0b0f15;
+  --surface: #111722;
+  --surface-2: #182130;
+  --text: #f3f6fb;
+  --muted: #aab4c3;
+  --faint: #7e8999;
+  --line: #283344;
+  --accent: #8ea7ff;
+  --accent-dark: #b4c2ff;
+  --accent-soft: #1e2a4a;
+  --success: #b4c2ff;
+  --success-soft: #1e2a4a;
+  --warn: #e1c788;
+  --warn-soft: #332b1d;
+  --danger: #ffaaa3;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .36);
+  --nav-bg: rgba(11, 15, 21, .9);
+  --card: #141b26;
+  --neutral-soft: #182130;
+  --accent-gradient: linear-gradient(120deg, #718cff, #9fb1ff);
+}
+
+body { background: var(--bg); color: var(--text); }
+.site-nav { background: var(--nav-bg); }
+.profile-card,
+.mini-project,
+.skill-card,
+.education-card,
+.project-card,
+.admin-panel,
+.hero-summary,
+.experience-card,
+.hobby-card { background: var(--card); }
+
+.button--ghost,
+.button--danger,
+.project-controls input,
+.project-controls select,
+.project-form input,
+.project-form textarea,
+.project-form select,
+.filter-chip { background: var(--card); color: var(--text); }
+
+.button--danger:hover,
+.button--ghost:hover { background: var(--surface-2); }
+
+.tag { color: #c9d1dc; }
+.project-card:hover { border-color: #46536b; }
+.project-card__visual {
+  background: linear-gradient(135deg, #1e2a4a, #141b26 65%, #182130);
+}
+.section--accent,
+.hobby-section {
+  background: linear-gradient(135deg, #111722, #0d121a);
+  border-color: var(--line);
+}
+.currently-badge,
+.currently-card { background: rgba(20, 27, 38, .9); border-color: var(--line); }
+.project-image-link,
+.case-study-hero-image { background: var(--surface); }
+::selection { background: #2b3c68; color: #fff; }
