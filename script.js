@@ -159,3 +159,91 @@ function formatProjectDate(value) {
   renderProjects();
   renderFeaturedProjects();
 })();
+
+(() => {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cat = document.createElement("div");
+  cat.className = "portfolio-cat is-walking";
+  cat.dataset.direction = "right";
+  cat.setAttribute("role", "img");
+  cat.setAttribute("aria-label", "A small calico cat walking along the top of the page. Drag it with the mouse.");
+  cat.innerHTML = `
+    <svg class="portfolio-cat__sprite" viewBox="0 0 64 46" aria-hidden="true">
+      <g class="portfolio-cat__body">
+        <path class="portfolio-cat__tail" d="M15 25 C5 24, 3 15, 8 12 C12 10, 14 15, 11 17" fill="none" stroke="#2f3135" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="32" cy="25" rx="19" ry="12" fill="#f7f2e8" stroke="#2f3135" stroke-width="2"/>
+        <path d="M19 18 C22 12, 30 12, 34 18 C30 22, 24 23, 19 18Z" fill="#d3833f"/>
+        <path d="M35 15 C42 14, 48 18, 50 23 C45 25, 40 24, 35 20Z" fill="#2f3135"/>
+        <circle cx="47" cy="18" r="10" fill="#f7f2e8" stroke="#2f3135" stroke-width="2"/>
+        <path d="M40 11 L42 3 L47 10Z" fill="#f7f2e8" stroke="#2f3135" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M50 10 L56 4 L56 13Z" fill="#d3833f" stroke="#2f3135" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M44 10 C47 8, 51 9, 53 12 L49 17 L43 15Z" fill="#2f3135"/>
+        <circle cx="45" cy="18" r="1.2" fill="#2f3135"/>
+        <circle cx="52" cy="18" r="1.2" fill="#2f3135"/>
+        <path d="M48 21 q2 2 4 0" fill="none" stroke="#2f3135" stroke-width="1.3" stroke-linecap="round"/>
+        <path class="portfolio-cat__leg--back" d="M23 31 v9" stroke="#2f3135" stroke-width="4" stroke-linecap="round"/>
+        <path class="portfolio-cat__leg--front" d="M41 31 v9" stroke="#2f3135" stroke-width="4" stroke-linecap="round"/>
+        <path d="M24 39 h5 M42 39 h5" stroke="#2f3135" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </svg>`;
+  document.body.appendChild(cat);
+
+  let x = 24;
+  let y = 38;
+  let direction = 1;
+  let dragging = false;
+  let pointerOffsetX = 0;
+  let pointerOffsetY = 0;
+  let lastTime = performance.now();
+  const speed = reducedMotion ? 0 : 34;
+
+  const trackY = () => Math.max(24, Math.min(46, document.querySelector(".site-nav")?.getBoundingClientRect().bottom - cat.offsetHeight / 2 || 38));
+  const clampX = value => Math.max(4, Math.min(window.innerWidth - cat.offsetWidth - 4, value));
+  const render = () => { cat.style.transform = `translate3d(${x}px, ${y}px, 0)`; };
+
+  function animate(now) {
+    const elapsed = Math.min((now - lastTime) / 1000, .05);
+    lastTime = now;
+    if (!dragging && speed > 0) {
+      x += direction * speed * elapsed;
+      const maxX = window.innerWidth - cat.offsetWidth - 4;
+      if (x >= maxX) { x = maxX; direction = -1; cat.dataset.direction = "left"; }
+      if (x <= 4) { x = 4; direction = 1; cat.dataset.direction = "right"; }
+      y += (trackY() - y) * Math.min(1, elapsed * 8);
+      render();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  cat.addEventListener("pointerdown", event => {
+    dragging = true;
+    cat.classList.add("is-dragging");
+    cat.classList.remove("is-walking");
+    const rect = cat.getBoundingClientRect();
+    pointerOffsetX = event.clientX - rect.left;
+    pointerOffsetY = event.clientY - rect.top;
+    cat.setPointerCapture(event.pointerId);
+  });
+
+  cat.addEventListener("pointermove", event => {
+    if (!dragging) return;
+    x = clampX(event.clientX - pointerOffsetX);
+    y = Math.max(0, Math.min(window.innerHeight - cat.offsetHeight, event.clientY - pointerOffsetY));
+    render();
+  });
+
+  const releaseCat = event => {
+    if (!dragging) return;
+    dragging = false;
+    cat.classList.remove("is-dragging");
+    cat.classList.add("is-walking");
+    if (cat.hasPointerCapture(event.pointerId)) cat.releasePointerCapture(event.pointerId);
+  };
+  cat.addEventListener("pointerup", releaseCat);
+  cat.addEventListener("pointercancel", releaseCat);
+  window.addEventListener("resize", () => { x = clampX(x); render(); });
+
+  y = trackY();
+  render();
+  requestAnimationFrame(animate);
+})();
