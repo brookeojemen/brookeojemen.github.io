@@ -87,21 +87,24 @@ function formatProjectDate(value) {
           <time datetime="${escapeHTML(project.date || "")}">${formatProjectDate(project.date)}</time>
         </div>
         <article class="project-card">
-          <div class="project-card__top">
-            <div>
-              <p class="project-meta">${escapeHTML(formatDate(project.date))} · ${escapeHTML(project.category)}</p>
-              <h2>${escapeHTML(project.title)}</h2>
+          <div class="project-card__visual"><span>${escapeHTML(project.category)}</span></div>
+          <div class="project-card__body">
+            <div class="project-card__top">
+              <div>
+                <p class="project-meta">${escapeHTML(formatDate(project.date))} · ${escapeHTML(project.category)}</p>
+                <h2>${escapeHTML(project.title)}</h2>
+              </div>
+              <span class="status ${project.status === "Completed" ? "status--done" : "status--wip"}">${escapeHTML(project.status)}</span>
             </div>
-            <span class="status ${project.status === "Completed" ? "status--done" : "status--wip"}">${escapeHTML(project.status)}</span>
-          </div>
-          ${project.question ? `<div class="project-question"><span>Question</span><strong>${escapeHTML(project.question)}</strong></div>` : ""}
-          <p class="project-description">${escapeHTML(project.description)}</p>
-          ${project.finding ? `<div class="project-finding"><span>What I’m looking at</span><p>${escapeHTML(project.finding)}</p></div>` : ""}
-          <div class="metric-row">${metrics}</div>
-          <div class="tag-row">${tags}</div>
-          <div class="project-card__foot">
-            <span class="project-id">${escapeHTML(project.id || projectSlug(project.title))}</span>
-            <div class="project-links">${links || '<span class="muted">Link coming soon</span>'}</div>
+            ${project.question ? `<div class="project-question"><span>Project question</span><strong>${escapeHTML(project.question)}</strong></div>` : ""}
+            <p class="project-description">${escapeHTML(project.description)}</p>
+            ${project.finding ? `<div class="project-finding"><span>Key takeaway</span><p>${escapeHTML(project.finding)}</p></div>` : ""}
+            <div class="metric-row">${metrics}</div>
+            <div class="tag-row">${tags}</div>
+            <div class="project-card__foot">
+              <span class="project-id">${escapeHTML(project.id || projectSlug(project.title))}</span>
+              <div class="project-links">${project.github ? `<a class="button" href="${escapeHTML(project.github)}" target="_blank" rel="noopener">View project ↗</a>` : '<span class="muted">Link coming soon</span>'}${project.demo ? `<a class="button button--ghost" href="${escapeHTML(project.demo)}" target="_blank" rel="noopener">Live demo ↗</a>` : ""}</div>
+            </div>
           </div>
         </article>
       </div>
