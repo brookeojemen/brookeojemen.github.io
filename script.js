@@ -51,7 +51,3 @@ function formatProjectDate(value) {
 
   renderProjects();
 })();
-
-(() => {
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  
