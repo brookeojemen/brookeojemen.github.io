@@ -1,0 +1,50 @@
+window.PROJECTS = [
+  {
+    id: "iris-flower-classification",
+    title: "Iris Flower Classification",
+    question: "Can flower species be predicted from physical measurements?",
+    description: "Exploratory analysis and classification using sepal and petal measurements from the Iris dataset.",
+    finding: "The project connects visual feature separation with a supervised classification workflow.",
+    category: "Machine Learning",
+    tags: ["Python", "pandas", "scikit-learn", "Classification", "Matplotlib"],
+    status: "Completed",
+    date: "2026-07",
+    github: "https://github.com/brookeojemen/iris-flower-classifications",
+    caseStudy: "project-details/iris.html",
+    image: "project-images/iris-flower-classification.svg",
+    imageAlt: "Placeholder for an Iris Flower Classification project screenshot",
+    metrics: ["150 samples", "3 species", "4 features"]
+  },
+  {
+    id: "penguin-data-analysis",
+    title: "Penguin Data Analysis",
+    question: "What separates penguin species across multiple measurements?",
+    description: "Data cleaning, descriptive statistics, and visualization using the Palmer Penguins dataset.",
+    finding: "The analysis compares species-level differences and documents the treatment of an anomalous measurement.",
+    category: "Data Analysis",
+    tags: ["Python", "pandas", "EDA", "Data Cleaning", "Matplotlib"],
+    status: "Completed",
+    date: "2026-07",
+    github: "https://github.com/brookeojemen/Penguin-Data-Analysis",
+    caseStudy: "project-details/penguins.html",
+    image: "project-images/penguin-data-analysis.svg",
+    imageAlt: "Placeholder for a Penguin Data Analysis project screenshot",
+    metrics: ["3 species", "7 variables", "Outlier investigation"]
+  },
+  {
+    id: "customer-behavior-analysis",
+    title: "Customer Behavior Analysis & RFM Segmentation",
+    question: "Can purchasing behavior identify meaningful customer groups?",
+    description: "Analysis of online retail transactions using RFM feature engineering and K-Means clustering.",
+    finding: "The workflow produced four interpretable customer segments ranging from inactive to high-value loyal customers.",
+    category: "Machine Learning",
+    tags: ["Python", "pandas", "RFM", "K-Means", "scikit-learn"],
+    status: "Completed",
+    date: "2026-07",
+    github: "https://github.com/brookeojemen/customer-behavior-analysis",
+    caseStudy: "project-details/customer-behavior.html",
+    image: "project-images/customer-behavior-analysis.svg",
+    imageAlt: "Placeholder for a Customer Behavior Analysis project screenshot",
+    metrics: ["396,769 transactions", "RFM features", "4 segments"]
+  }
+];
