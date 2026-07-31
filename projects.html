@@ -1,90 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Data science and software projects by Brooke Ojemen.">
-  <title>Projects — Brooke Ojemen</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <script>
-    (() => {
-      const saved = localStorage.getItem("brookePortfolioTheme");
-      const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      document.documentElement.dataset.theme = saved || preferred;
-    })();
-  </script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html"><span class="brand-mark">B.</span> Brooke Ojemen</a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="projects.html" aria-current="page">Projects</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <a href="mailto:brooke.ojemen@gmail.com">Email</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"></button>
-      </div>
-    </div>
-  </nav>
+# Brooke Ojemen Portfolio
 
-  <main>
-    <header class="page-hero container">
-      <p class="eyebrow">~/projects</p>
-      <h1>Projects</h1>
-      <p>Data science and software projects demonstrating analysis, modeling, programming, and technical communication.</p>
-    </header>
+A clean, white, professional portfolio designed for data science, analytics, machine learning, and backend software engineering applications.
 
-    <section class="container project-controls" aria-label="Project filters">
-      <label class="search-box">
-        <span>Search</span>
-        <input type="search" data-project-search placeholder="Python, EDA, classification…">
-      </label>
-      <label>
-        <span>Category</span>
-        <select data-project-category>
-          <option value="all">All categories</option>
-          <option value="Machine Learning">Machine Learning</option>
-          <option value="Data Analysis">Data Analysis</option>
-          <option value="Software Engineering">Software Engineering</option>
-        </select>
-      </label>
-      <label>
-        <span>Status</span>
-        <select data-project-status>
-          <option value="all">All statuses</option>
-          <option value="Completed">Completed</option>
-          <option value="In Progress">In Progress</option>
-        </select>
-      </label>
-      <label>
-        <span>Sort</span>
-        <select data-project-sort>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="az">A–Z</option>
-        </select>
-      </label>
-    </section>
+## Files
 
-    <section class="container projects-section">
-      <div class="project-list-head"><span data-project-count>0 projects</span><span class="project-list-note">clean → explore → model → explain</span></div>
-      <div class="project-grid" data-project-grid></div>
-      <div class="empty-state" data-project-empty hidden>
-        <h2>No matching projects</h2>
-        <p>Try a different search term or filter.</p>
-      </div>
-    </section>
-    </main>
+- `index.html` — home page
+- `projects.html` — searchable/filterable project portfolio
+- `admin.html` — no-code project editor
+- `style.css` — complete responsive design
+- `projects.js` — default project data
+- `script.js` — project rendering, search, filters, sorting
+- `admin.js` — add/edit/delete/export project workflow
 
-  <footer class="footer">
-    <div class="container footer-inner"><span>© 2026 Brooke Ojemen</span><a href="index.html">Back home</a></div>
-  </footer>
+## Editing projects without touching code
 
-  <script src="projects.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+1. Open `admin.html` in your browser.
+2. Fill in the project form and click **Save project**.
+3. Your changes are saved in that browser using `localStorage` and immediately appear on `projects.html` and the featured projects section on `index.html`.
+4. When ready to publish, click **Export projects.js**.
+5. Replace the `projects.js` file in your GitHub Pages repository with the downloaded file and commit/push it.
+
+GitHub Pages is a static host, so a browser cannot permanently rewrite files in your repository on its own. The export workflow gives you a form-based editor without requiring you to manually edit project HTML or JavaScript objects.
+
+## Included projects
+
+- Iris Flower Classification
+- Penguin Data Analysis
+- Customer Behavior Analysis
+
+The Iris project already points to your current repository. Add GitHub links for the other projects when those repositories are ready.
+
+## GitHub Pages
+
+Upload all six website files to the same repository directory. GitHub Pages will serve `index.html` automatically.
+
+
+## Personality update
+This version uses an aquamarine/teal primary accent with a restrained blush-pink secondary accent.
+The homepage now includes:
+- a small `whoami` detail
+- a dataframe-style current-focus card
+- a "Currently" section
+- more personal writing
+- question-driven project storytelling
+
+## Public vs private files
+For your public GitHub Pages repository, upload:
+- index.html
+- projects.html
+- style.css
+- projects.js
+- script.js
+- README.md
+
+Keep these local/private:
+- admin.html
+- admin.js
+
+The editor can export a new `projects.js`, which you then replace in your public repository.
+
+
+## Projects timeline
+The projects page uses a teal/aquamarine vertical project journey on desktop, with pink markers for in-progress work. On mobile it simplifies to date-first cards.
+
+
+## Data-science-first positioning
+This version removes backend engineering as a primary career focus. Programming and software-development skills remain visible as supporting strengths, but the portfolio messaging now centers on:
+- Data Science
+- Data Analysis
+- Machine Learning
+- Statistics
+
+## Hobby photo section
+The homepage now includes a "Beyond the data" section with a photo placeholder.
+To use your own photo:
+1. Add the image to the repository, for example `assets/hobby.jpg`
+2. Replace the placeholder `<div class="hobby-image-placeholder">...</div>` with:
+   `<img class="hobby-photo" src="assets/hobby.jpg" alt="Describe the hobby photo">`
+3. Update the hobby title and caption text.
+
+
+## Optional live demos
+Every project already has a `demo` field. Leave it as `demo: ""` when a live demo is unnecessary. If you later deploy an interactive dashboard, web app, or model demo, paste its URL into that field and the Projects page will automatically show a **Live demo ↗** link.

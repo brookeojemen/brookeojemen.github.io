@@ -1,47 +1,82 @@
-window.PROJECTS = [
-  {
-    id: "iris-flower-classification",
-    title: "Iris Flower Classification",
-    question: "Can flower species be predicted from a few physical measurements?",
-    description: "I used the Iris dataset to build and evaluate classification models from sepal and petal measurements, while exploring which features best separate the three species.",
-    finding: "The project helped me connect exploratory visualization with the classification decisions a model eventually makes.",
-    category: "Machine Learning",
-    tags: ["Python", "Pandas", "scikit-learn", "Classification", "Matplotlib"],
-    status: "Completed",
-    date: "2026-07",
-    github: "https://github.com/Bao004/iris-flower-classifications",
-    demo: "",
-    featured: true,
-    metrics: ["Classification", "Model evaluation", "EDA"]
-  },
-  {
-    id: "penguin-data-analysis",
-    title: "Penguin Data Analysis",
-    question: "What separates penguin species when you look beyond a single measurement?",
-    description: "I analyzed the Palmer Penguins dataset using data cleaning, descriptive statistics, and visualizations to compare species across culmen length, flipper length, body mass, and island distribution.",
-    finding: "Chinstrap penguins showed greater average culmen length than Adelie penguins, while Gentoo penguins showed substantially greater average flipper length and body mass. The analysis also identified and handled an anomalous flipper-length measurement.",
-    category: "Data Analysis",
-    tags: ["Python", "Pandas", "EDA", "Data Cleaning", "Descriptive Statistics", "Matplotlib"],
-    status: "Completed",
-    date: "2026-07",
-    github: "https://github.com/brookeojemen/Penguin-Data-Analysis.git",
-    demo: "",
-    featured: true,
-    metrics: ["EDA", "Descriptive statistics", "Outlier investigation"]
-  },
-  {
-    id: "customer-behavior-analysis",
-    title: "Customer Behavior Analysis & RFM Customer Segmentation",
-    question: "Can customer purchasing behavior be used to identify meaningful customer segments?",
-    description: "I analyzed nearly 400,000 online retail transactions, engineered Recency, Frequency, and Monetary (RFM) customer features, and applied K-Means clustering to identify distinct customer purchasing behaviors.",
-    finding: "RFM feature engineering and clustering revealed four interpretable customer segments ranging from inactive customers to high-value loyal customers, demonstrating how unsupervised machine learning can support customer analytics.",
-    category: "Machine Learning",
-    tags: ["Python","Pandas","EDA","Data Cleaning","RFM Analysis","K-Means","scikit-learn","Machine Learning"],
-    status: "Completed",
-    date: "2026-07",
-    github: "https://github.com/brookeojemen/customer-behavior-analysis.git",
-    demo: "",
-    featured: true,
-    metrics: ["396,769 transactions","RFM Feature Engineering","K-Means Clustering"]
-  }
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data science and software projects by Brooke Ojemen.">
+  <title>Projects — Brooke Ojemen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">B.</span> Brooke Ojemen</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="mailto:brooke.ojemen@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-hero container">
+      <p class="eyebrow">~/projects</p>
+      <h1>Questions I’ve explored.</h1>
+      <p>Each project starts with something I want to understand. Search by topic, tool, or skill—or just follow the questions.</p>
+    </header>
+
+    <section class="container project-controls" aria-label="Project filters">
+      <label class="search-box">
+        <span>Search</span>
+        <input type="search" data-project-search placeholder="Python, EDA, classification…">
+      </label>
+      <label>
+        <span>Category</span>
+        <select data-project-category>
+          <option value="all">All categories</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Data Analysis">Data Analysis</option>
+          <option value="Software Engineering">Software Engineering</option>
+        </select>
+      </label>
+      <label>
+        <span>Status</span>
+        <select data-project-status>
+          <option value="all">All statuses</option>
+          <option value="Completed">Completed</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+      </label>
+      <label>
+        <span>Sort</span>
+        <select data-project-sort>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="az">A–Z</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="container projects-section">
+      <div class="project-list-head"><span data-project-count>0 projects</span><span class="project-list-note">clean → explore → model → explain</span></div>
+      <div class="project-grid" data-project-grid></div>
+      <div class="empty-state" data-project-empty hidden>
+        <h2>No matching projects</h2>
+        <p>Try a different search term or filter.</p>
+      </div>
+    </section>
+    <div id="projects-grid" class="projects-timeline" aria-live="polite"></div>
+</main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><span>© 2026 Brooke Ojemen</span><a href="index.html">Back home</a></div>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
