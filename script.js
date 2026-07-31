@@ -26,7 +26,7 @@ function formatProjectDate(value) {
           <div class="project-card__body">
             <div class="project-card__top">
               <div><p class="project-meta">${escapeHTML(formatProjectDate(project.date))} · ${escapeHTML(project.category)}</p><h2>${escapeHTML(project.title)}</h2></div>
-              <span class="status status--done">${escapeHTML(project.status)}</span>
+              <span class="status ${project.status === "Completed" ? "status--done" : "status--wip"}">${escapeHTML(project.status)}</span>
             </div>
             <p class="project-description">${escapeHTML(project.description)}</p>
             <div class="metric-row">${project.metrics.map(metric => `<span>${escapeHTML(metric)}</span>`).join("")}</div>
