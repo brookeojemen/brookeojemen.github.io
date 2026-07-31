@@ -1,4 +1,27 @@
 
+(() => {
+  const key = "brookePortfolioTheme";
+  const root = document.documentElement;
+  const button = document.querySelector("[data-theme-toggle]");
+  if (!button) return;
+
+  const updateButton = () => {
+    const dark = root.dataset.theme === "dark";
+    button.setAttribute("aria-pressed", String(dark));
+    button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    button.title = dark ? "Light mode" : "Dark mode";
+  };
+
+  button.addEventListener("click", () => {
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem(key, root.dataset.theme);
+    updateButton();
+  });
+
+  updateButton();
+})();
+
+
 function formatProjectDate(value) {
   if (!value) return "Undated";
   const parts = value.split("-");
