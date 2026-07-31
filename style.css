@@ -790,87 +790,6 @@ html[data-theme="dark"] .project-card:hover { border-color: #46516a; }
   html[data-theme="dark"] .theme-toggle::before { transform: translateX(18px); }
 }
 
-/* Interactive calico cat */
-.portfolio-cat {
-  position: fixed;
-  left: 24px;
-  top: 38px;
-  width: 58px;
-  height: 42px;
-  z-index: 80;
-  cursor: grab;
-  user-select: none;
-  touch-action: none;
-  filter: drop-shadow(0 3px 3px rgba(18, 20, 23, .16));
-  transition: filter .2s ease;
-}
-.portfolio-cat:hover { filter: drop-shadow(0 4px 5px rgba(18, 20, 23, .24)); }
-.portfolio-cat.is-dragging { cursor: grabbing; }
-.portfolio-cat__sprite {
-  width: 100%;
-  height: 100%;
-  display: block;
-  transform-origin: center;
-}
-.portfolio-cat[data-direction="left"] .portfolio-cat__sprite { transform: scaleX(-1); }
-.portfolio-cat.is-walking .portfolio-cat__leg--front { animation: cat-step-a .34s ease-in-out infinite alternate; transform-origin: 38px 31px; }
-.portfolio-cat.is-walking .portfolio-cat__leg--back { animation: cat-step-b .34s ease-in-out infinite alternate; transform-origin: 23px 31px; }
-.portfolio-cat.is-walking .portfolio-cat__tail { animation: cat-tail .7s ease-in-out infinite alternate; transform-origin: 13px 23px; }
-.portfolio-cat.is-dragging .portfolio-cat__body { animation: cat-held .55s ease-in-out infinite alternate; transform-origin: center; }
-@keyframes cat-step-a { to { transform: rotate(13deg) translateY(1px); } }
-@keyframes cat-step-b { to { transform: rotate(-13deg) translateY(1px); } }
-@keyframes cat-tail { to { transform: rotate(-10deg); } }
-@keyframes cat-held { to { transform: rotate(2deg) translateY(1px); } }
-@media (max-width: 760px) {
-  .portfolio-cat { width: 50px; height: 36px; top: 42px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .portfolio-cat.is-walking .portfolio-cat__leg--front,
-  .portfolio-cat.is-walking .portfolio-cat__leg--back,
-  .portfolio-cat.is-walking .portfolio-cat__tail,
-  .portfolio-cat.is-dragging .portfolio-cat__body { animation: none; }
-}
-
-
-/* Cat visibility switch */
-.cat-toggle {
-  position: relative;
-  width: 50px;
-  height: 28px;
-  flex: 0 0 auto;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--text);
-  cursor: pointer;
-}
-.cat-toggle::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 25px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--card);
-  box-shadow: 0 1px 5px rgba(0,0,0,.18);
-  transition: left .2s ease;
-}
-.cat-toggle span {
-  position: absolute;
-  left: 7px;
-  top: 4px;
-  font-size: 13px;
-  line-height: 1;
-}
-.cat-toggle.is-off { background: var(--surface-2); }
-.cat-toggle.is-off::before { left: 3px; }
-.cat-toggle.is-off span { left: 29px; opacity: .55; }
-.cat-toggle:hover { border-color: var(--accent); }
-.cat-toggle:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
-.portfolio-cat[hidden] { display: none; }
-
 /* 2026 portfolio refinement */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
   outline: 3px solid var(--accent);
@@ -904,8 +823,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .case-study-sidebar dt { color: var(--faint); font-family: var(--mono); font-size: 11px; text-transform: uppercase; margin-top: 16px; }
 .case-study-sidebar dd { margin: 4px 0 0; color: var(--text); }
 .placeholder-note { padding: 16px 18px; border-left: 3px solid var(--accent); background: var(--accent-soft); color: var(--accent-dark); border-radius: 0 10px 10px 0; }
-.cat-toggle::after { content: " Cat"; font-size: 12px; margin-left: 4px; }
-.cat-toggle { width: auto !important; min-width: 64px; padding: 0 9px !important; }
 @media (max-width: 960px) { .project-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) {
   .project-grid { grid-template-columns: 1fr; }
@@ -913,15 +830,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .case-study-sidebar { position: static; }
   .hero-secondary-links { width: 100%; margin-left: 0; }
 }
-
-/* Crisp pixel-art cat sprite */
-.portfolio-cat__sprite.pixel {
-  width: 48px;
-  height: 48px;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-.portfolio-cat[data-direction="left"] .portfolio-cat__sprite.pixel { transform: scaleX(-1); }
 
 /* Permanent near-black night-mode theme */
 :root {
