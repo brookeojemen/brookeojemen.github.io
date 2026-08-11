@@ -59,7 +59,7 @@ window.PROJECTS = [
     date: "2026-07",
     github: "https://github.com/brookeojemen/HousingPrediction",
     caseStudy: "project-details/housing.html",
-    image: ,
+    image: "",
     imageAlt: "Housing Price Prediction regression project currently in progress",
     metrics: ["1,460 rows", "81 columns", "Regression"]
   }  ,{
