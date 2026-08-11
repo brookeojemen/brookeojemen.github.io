@@ -6,11 +6,11 @@
   --muted: #626a73;
   --faint: #8a929b;
   --line: #e4e7eb;
-  --accent: #3157d5;
-  --accent-dark: #2442a6;
-  --accent-soft: #eef2ff;
-  --success: #2442a6;
-  --success-soft: #eef2ff;
+  --accent: #0F9F8F;
+  --accent-dark: #0B7F73;
+  --accent-soft: #E8F8F5;
+  --success: #0B7F73;
+  --success-soft: #E8F8F5;
   --warn: #91650a;
   --warn-soft: #fff7df;
   --danger: #b42318;
@@ -188,14 +188,14 @@ p { color: var(--muted); }
 
 /* ============================================================
    Brooke-specific personality
-   Primary accent: professional blue
+   Primary accent: professional teal
    Secondary accent: neutral gray
    ============================================================ */
 :root {
-  --accent-bright: #5577e6;
+  --accent-bright: #2DD4BF;
   --neutral-accent: #6b7280;
   --neutral-soft: #f1f3f5;
-  --accent-gradient: linear-gradient(120deg, #3157d5 0%, #5577e6 62%, #6b7280 140%);
+  --accent-gradient: linear-gradient(120deg, #0F9F8F 0%, #2DD4BF 62%, #6b7280 140%);
 }
 
 .brand { display: inline-flex; align-items: center; gap: 9px; }
@@ -612,7 +612,7 @@ p { color: var(--muted); }
   background:
     radial-gradient(circle at 22% 25%, rgba(85,119,230,.28), transparent 22%),
     radial-gradient(circle at 78% 72%, rgba(107,114,128,.22), transparent 24%),
-    linear-gradient(135deg, #eef2ff, #f5f6f8);
+    linear-gradient(135deg, #E8F8F5, #f5f6f8);
   border: 1px dashed #d8deea;
   color: var(--accent-dark);
   font-family: var(--mono);
@@ -699,10 +699,10 @@ p { color: var(--muted); }
   color-scheme: light;
   --nav-bg: rgba(255,255,255,.92);
   --card: #ffffff;
-  --accent-bright: #5577e6;
+  --accent-bright: #2DD4BF;
   --neutral-accent: #6b7280;
   --neutral-soft: #f1f3f5;
-  --accent-gradient: linear-gradient(120deg, #2442a6, #5577e6);
+  --accent-gradient: linear-gradient(120deg, #0B7F73, #2DD4BF);
 }
 
 html[data-theme="dark"] {
@@ -714,18 +714,18 @@ html[data-theme="dark"] {
   --muted: #aeb6c2;
   --faint: #7f8998;
   --line: #2a3240;
-  --accent: #8da6ff;
-  --accent-dark: #b0c0ff;
-  --accent-soft: #202b4d;
-  --success: #aab9ee;
-  --success-soft: #202b4d;
+  --accent: #5EEAD4;
+  --accent-dark: #99F6E4;
+  --accent-soft: #123A36;
+  --success: #5EEAD4;
+  --success-soft: #123A36;
   --warn: #d7c28c;
   --warn-soft: #302b20;
   --danger: #ffaaa3;
   --shadow: 0 18px 46px rgba(0,0,0,.32);
   --nav-bg: rgba(14,17,22,.9);
   --card: #171c25;
-  --accent-gradient: linear-gradient(120deg, #718cff, #9fb1ff);
+  --accent-gradient: linear-gradient(120deg, #2DD4BF, #5EEAD4);
 }
 
 .site-nav { background: var(--nav-bg); }
@@ -778,7 +778,7 @@ html[data-theme="dark"] .hobby-section {
 html[data-theme="dark"] .currently-badge,
 html[data-theme="dark"] .currently-card { background: rgba(23,28,37,.86); border-color: var(--line); }
 html[data-theme="dark"] .project-card__visual {
-  background: linear-gradient(135deg, #202b4d, #171c25 65%, #1d2330);
+  background: linear-gradient(135deg, #123A36, #171c25 65%, #1d2330);
 }
 html[data-theme="dark"] .timeline-dot { background: var(--bg); }
 html[data-theme="dark"] .tag { color: #c8ced8; }
@@ -841,11 +841,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   --muted: #adb4be;
   --faint: #7f8792;
   --line: #252a31;
-  --accent: #8ea7ff;
-  --accent-dark: #b7c5ff;
-  --accent-soft: #18203a;
-  --success: #b7c5ff;
-  --success-soft: #18203a;
+  --accent: #5EEAD4;
+  --accent-dark: #99F6E4;
+  --accent-soft: #123A36;
+  --success: #99F6E4;
+  --success-soft: #123A36;
   --warn: #e1c788;
   --warn-soft: #2b2419;
   --danger: #ffaaa3;
@@ -853,7 +853,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   --nav-bg: rgba(5, 6, 7, .92);
   --card: #0d1014;
   --neutral-soft: #111419;
-  --accent-gradient: linear-gradient(120deg, #718cff, #9fb1ff);
+  --accent-gradient: linear-gradient(120deg, #2DD4BF, #5EEAD4);
 }
 
 body { background: var(--bg); color: var(--text); }
@@ -883,7 +883,7 @@ body { background: var(--bg); color: var(--text); }
 .tag { color: #c9d1dc; }
 .project-card:hover { border-color: #3c4657; }
 .project-card__visual {
-  background: linear-gradient(135deg, #18203a, #0d1014 65%, #111419);
+  background: linear-gradient(135deg, #123A36, #0d1014 65%, #111419);
 }
 .section--accent,
 .hobby-section {
