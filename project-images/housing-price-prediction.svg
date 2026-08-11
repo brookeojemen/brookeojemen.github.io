@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
-<title id="title">Housing Price Prediction project in progress</title><desc id="desc">A stylized regression chart with house icons and an upward trend line.</desc>
-<rect width="1200" height="750" fill="#f7f8fb"/><rect x="90" y="75" width="1020" height="590" rx="28" fill="#fff" stroke="#dfe3eb" stroke-width="3"/>
-<path d="M190 560H1010M190 560V165" stroke="#aeb7c7" stroke-width="4"/>
-<path d="M235 520 C400 470 500 430 630 345 S850 250 970 190" fill="none" stroke="#2442a6" stroke-width="12" stroke-linecap="round"/>
-<g fill="#8da6ff" stroke="#2442a6" stroke-width="4"><circle cx="270" cy="495" r="15"/><circle cx="385" cy="462" r="15"/><circle cx="485" cy="420" r="15"/><circle cx="595" cy="370" r="15"/><circle cx="720" cy="315" r="15"/><circle cx="835" cy="260" r="15"/><circle cx="945" cy="210" r="15"/></g>
-<g transform="translate(790 420)"><path d="M0 95L105 10l105 85v145H0z" fill="#eef2ff" stroke="#2442a6" stroke-width="7"/><path d="M75 240v-80h60v80" fill="#fff" stroke="#2442a6" stroke-width="7"/><path d="M-15 100L105 0l120 100" fill="none" stroke="#2442a6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="145" y="130" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#1c2230">Housing Price Prediction</text><text x="145" y="630" font-family="Arial, sans-serif" font-size="25" fill="#667085">Regression project · currently in progress</text>
-</svg>
