@@ -62,5 +62,20 @@ window.PROJECTS = [
     image: "project-images/housing-price-prediction.svg",
     imageAlt: "Housing Price Prediction regression project currently in progress",
     metrics: ["1,460 rows", "81 columns", "Regression"]
+  }  ,{
+    id: "backend-project-coming-soon",
+    title: "Backend Project — Coming Soon",
+    question: "How can a well-structured backend API support a practical application?",
+    description: "Planned Java backend project focused on applying Spring Boot, Maven, REST API design, and database concepts in a complete application.",
+    finding: "Planned: implementation details and technical results will be added as development begins.",
+    category: "Backend",
+    tags: ["Java", "Spring Boot", "Maven", "REST API", "Planned"],
+    status: "Planned",
+    date: "2026-08",
+    github: "",
+    caseStudy: "",
+    image: "",
+    imageAlt: "Planned Java backend development project",
+    metrics: ["Java", "Spring Boot", "REST API"]
   }
 ];
