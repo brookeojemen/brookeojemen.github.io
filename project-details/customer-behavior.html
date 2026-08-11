@@ -1,1 +1,146 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Case study for Customer Behavior Analysis & RFM Segmentation by Brooke Ojemen."><title>Customer Behavior Analysis & RFM Segmentation — Brooke Ojemen</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml"></head><body><nav class="site-nav"><div class="container nav-inner"><a class="brand" href="../index.html"><span class="brand-mark">B.</span> Brooke Ojemen</a><div class="nav-links"><a href="../index.html">Home</a><a href="../projects.html" aria-current="page">Projects</a><a href="../resume.pdf" target="_blank" rel="noopener">Resume</a><a href="mailto:brooke.ojemen@gmail.com">Email</a></div></div></nav><main class="case-study container"><header class="case-study-header"><p class="eyebrow">Machine Learning · Clustering</p><h1>Customer Behavior Analysis & RFM Segmentation</h1><p class="case-study-lede">An unsupervised learning project that transforms online retail transactions into customer-level RFM features.</p><div class="hero-actions"><a class="button" href="https://github.com/brookeojemen/customer-behavior-analysis" target="_blank" rel="noopener">View GitHub ↗</a><a class="button button--ghost" href="../projects.html">All projects</a></div></header><img class="case-study-hero-image" src="../project-images/customer-behavior-analysis.png" alt="Customer clusters plotted by order frequency and total spending"><div class="case-study-layout"><div class="case-study-main"><section><h2>Problem</h2><p>Use purchase history to identify meaningful groups of customers with different engagement and value patterns.</p></section><section><h2>Process</h2><p>The workflow cleans transaction records, calculates Recency, Frequency, and Monetary features, scales those features, selects a cluster solution, and interprets the resulting customer groups.</p></section><section><h2>Results and interpretation</h2><p>The analysis produced four interpretable groups ranging from inactive customers to high-value loyal customers.</p></section><section><h2>Limitations</h2><p>K-Means assumes roughly spherical clusters and requires the number of clusters to be selected in advance. RFM also summarizes behavior without explaining why customers act differently.</p></section></div><aside class="case-study-sidebar"><h2>Project details</h2><dl><dt>Dataset</dt><dd>UCI Online Retail</dd><dt>Methods</dt><dd>Cleaning, RFM analysis, K-Means clustering</dd><dt>Scale</dt><dd>396,769 transactions · 4 segments</dd><dt>Repository</dt><dd><a class="text-link" href="https://github.com/brookeojemen/customer-behavior-analysis" target="_blank" rel="noopener">GitHub ↗</a></dd></dl></aside></div></main><footer class="footer"><div class="container footer-inner"><span>© 2026 Brooke Ojemen</span><a href="../projects.html">Back to projects</a></div></footer><script src="../script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Case study for Customer Behavior Analysis &amp; RFM Segmentation by Brooke Ojemen." name="description"/>
+  <title>
+   Customer Behavior Analysis &amp; RFM Segmentation — Brooke Ojemen
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="../style.css" rel="stylesheet"/>
+  <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+ </head>
+ <body>
+  <nav class="site-nav">
+   <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+     <span class="brand-mark">
+      B.
+     </span>
+     Brooke Ojemen
+    </a>
+    <div class="nav-links">
+     <a href="../index.html">
+      Home
+     </a>
+     <a aria-current="page" href="../projects.html">
+      Projects
+     </a>
+     <a href="../resume.pdf" rel="noopener" target="_blank">
+      Resume
+     </a>
+     <a href="mailto:brooke.ojemen@gmail.com">
+      Email
+     </a>
+    </div>
+   </div>
+  </nav>
+  <main class="case-study container">
+   <header class="case-study-header">
+    <p class="eyebrow">
+     Machine Learning · Clustering
+    </p>
+    <h1>
+     Customer Behavior Analysis &amp; RFM Segmentation
+    </h1>
+    <p class="case-study-lede">
+     An unsupervised learning project that transforms online retail transactions into customer-level RFM features.
+    </p>
+    <div class="hero-actions">
+     <a class="button" href="https://github.com/brookeojemen/customer-behavior-analysis" rel="noopener" target="_blank">
+      View GitHub ↗
+     </a>
+     <a class="button button--ghost" href="../projects.html">
+      All projects
+     </a>
+    </div>
+   </header>
+   <img alt="Customer clusters plotted by order frequency and total spending" class="case-study-hero-image" src="../project-images/customer-behavior-analysis.png"/>
+   <div class="case-study-layout">
+    <div class="case-study-main">
+     <section>
+      <h2>
+       Problem
+      </h2>
+      <p>
+       Use purchase history to identify meaningful groups of customers with different engagement and value patterns.
+      </p>
+     </section>
+     <section>
+      <h2>
+       Process
+      </h2>
+      <p>
+       The workflow cleans transaction records, calculates Recency, Frequency, and Monetary features, scales those features, selects a cluster solution, and interprets the resulting customer groups.
+      </p>
+     </section>
+     <section>
+      <h2>
+       Results and interpretation
+      </h2>
+      <p>
+       The analysis produced four interpretable groups ranging from inactive customers to high-value loyal customers.
+      </p>
+     </section>
+     <section>
+      <h2>
+       Limitations
+      </h2>
+      <p>
+       K-Means assumes roughly spherical clusters and requires the number of clusters to be selected in advance. RFM also summarizes behavior without explaining why customers act differently.
+      </p>
+     </section>
+    </div>
+    <aside class="case-study-sidebar">
+     <h2>
+      Project details
+     </h2>
+     <dl>
+      <dt>
+       Dataset
+      </dt>
+      <dd>
+       UCI Online Retail
+      </dd>
+      <dt>
+       Methods
+      </dt>
+      <dd>
+       Cleaning, RFM analysis, K-Means clustering
+      </dd>
+      <dt>
+       Scale
+      </dt>
+      <dd>
+       396,769 transactions · 4 segments
+      </dd>
+      <dt>
+       Repository
+      </dt>
+      <dd>
+       <a class="text-link" href="https://github.com/brookeojemen/customer-behavior-analysis" rel="noopener" target="_blank">
+        GitHub ↗
+       </a>
+      </dd>
+     </dl>
+    </aside>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container footer-inner">
+    <span>
+     © 2026 Brooke Ojemen
+    </span>
+    <a href="../projects.html">
+     Back to projects
+    </a>
+   </div>
+  </footer>
+  <script src="../script.js">
+  </script>
+ </body>
+</html>
+
